@@ -1,16 +1,16 @@
 import Card from "./Card";
 
-export default function Cards({ characters, onClose }) {
+const Cards = ({ characters, onClose }) => {
   return (
     <div>
+      {/* <h1>Home</h1> */}
       {
         characters.map((Pj) => {
           // console.log(Pj);
           return (
-            <div>
+            <div key={Pj.id}>
               <Card
                 id={Pj.id}
-                key={Pj.id}
                 name={Pj.name}
                 status={Pj.status}
                 species={Pj.species}
@@ -36,4 +36,5 @@ export default function Cards({ characters, onClose }) {
       }
     </div>
   );
-}
+};
+export default Cards;

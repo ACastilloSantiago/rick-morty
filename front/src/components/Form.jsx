@@ -1,4 +1,4 @@
-import { useState, useEffect, useNavigate } from "react";
+import { useState } from "react";
 import validation from "./Validation";
 const Form = ({ login }) => {
   const [userData, setUserData] = useState({
@@ -10,6 +10,9 @@ const Form = ({ login }) => {
 
   const handleChange = (event) => {
     setUserData({ ...userData, [event.target.name]: event.target.value });
+    setErrors(
+      validation({ ...userData, [event.target.name]: event.target.value })
+    );
   };
 
   const handlerSubmit = (event) => {
@@ -25,21 +28,23 @@ const Form = ({ login }) => {
         value={userData.email}
         type="text"
         onChange={handleChange}
+        placeholder="Ingrese su email"
       />
       <br />
 
-      {/* <span>{validation(userData.email)}</span> */}
+      <span>{errors.email}</span>
       <br />
       <label>Password:</label>
       <input
         name="password"
         value={userData.password}
-        type="text"
+        type="password"
         onChange={handleChange}
+        placeholder="Ingrese su password"
       />
       <br />
 
-      {/* <span>{validation(text)}</span> */}
+      <span>{errors.password}</span>
 
       <br />
       <button type="submit">Submit</button>

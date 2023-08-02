@@ -7,11 +7,14 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import About from "./components/About";
 import Detail from "./components/Detail";
 import Form from "./components/Form";
-const URL_BASE = "https://rym2-production.up.railway.app/api/character/";
-const API_KEY = "key=henrym-acastillosantiago";
+import Favorites from "./components/Favorites";
+export const URL_BASE = "https://rym2-production.up.railway.app/api/character/";
+export const API_KEY = "key=henrym-acastillosantiago";
+
 function App() {
-  const location = useLocation();
-  const ruta = location.pathname === "/";
+  <h1>2</h1>;
+  const { pathname } = useLocation();
+
   const [characters, setCharacters] = useState([]);
   function onSearch(id) {
     axios(`${URL_BASE}${id}?${API_KEY}`).then(({ data }) => {
@@ -33,7 +36,7 @@ function App() {
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
   const EMAIL = "sattog@gmail.com";
-  const PASSWORD = "1234";
+  const PASSWORD = "123456";
 
   function login(userData) {
     if (userData.password === PASSWORD && userData.email === EMAIL) {
@@ -46,7 +49,7 @@ function App() {
   }, [access]);
   return (
     <div>
-      {location !== "/" && <Nav onSearch={onSearch} />}
+      {pathname !== "/" && <Nav onSearch={onSearch} />}
       <Routes>
         <Route path="/" element={<Form login={login} />} />
         <Route
@@ -55,6 +58,7 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </div>
   );

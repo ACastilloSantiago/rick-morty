@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function SearchBar({ onSearch }) {
+const SearchBar = ({ onSearch }) => {
   const [id, setid] = useState("");
 
   const handleChange = (event) => {
@@ -19,4 +19,5 @@ export default function SearchBar({ onSearch }) {
       </button>
     </div>
   );
-}
+};
+export default SearchBar;
