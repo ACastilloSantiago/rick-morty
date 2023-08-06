@@ -17,7 +17,7 @@ const validation = (data) => {
     errors.password = "La contraseña debe contener al menos una numero.";
   }
   if (!data.password) {
-    errors.password = "Su password no puede estar vacio!";
+    errors.password = "Su contraseña no puede estar vacio!";
   }
   return errors;
 };

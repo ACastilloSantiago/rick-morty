@@ -1,0 +1,70 @@
+.img {
+  width: 40%;
+
+  /* justify-content: center; */
+  /* text-align: center; */
+}
+.div {
+  text-align: center;
+  /* display: flex; */
+  /* align-items: center; */
+}
+.tituFor {
+  /* color: #ffffffc9; */
+  background-color: #00ff6a4d;
+  color: #fff;
+  padding: 1px 2px;
+  border: 2px solid #00ff6a81;
+  border-radius: 5px;
+  margin: 20px;
+
+  /* cursor: pointer; */
+  /* width: 50%; */
+}
+.validation {
+  color: #eb6868;
+  margin: 10px;
+}
+.forminicio {
+  background-color: #333333c0;
+  padding: 20px;
+  border-radius: 10px;
+  /* text-align: center; */
+  /* height: 40%; */
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inputinicio {
+  border: 2px solid #00ff6a91;
+  /* width: 75%; */
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffffffe8;
+  background-color: #333;
+  /* text-align: center; */
+  width: 60%;
+
+  margin: 0 auto;
+}
+
+.submit {
+  background-color: #00ff6a9f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+  margin: 10px;
+}
+
+.submit:hover {
+  background-color: #00ff6a4d;
+  width: 50%;
+}
+.labelIni {
+  /* background-color: #00ff6ac9; */
+  color: #fff;
+}

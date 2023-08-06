@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { URL_BASE, API_KEY } from "../App";
+import { URL_BASE, API_KEY } from "../../App";
 const Detail = () => {
   const { id } = useParams();
   //   console.log(id);

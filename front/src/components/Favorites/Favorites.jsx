@@ -1,7 +1,12 @@
 import { connect } from "react-redux";
-import Card from "./Card";
+import Card from "../Card/Card";
 import { useDispatch } from "react-redux";
-import { removeFav, addFav, orderCards, filterCards } from "../Redux/actions";
+import {
+  removeFav,
+  addFav,
+  orderCards,
+  filterCards,
+} from "../../Redux/actions";
 import { useState } from "react";
 const Favorites = ({ myFavorites }) => {
   const dispatch = useDispatch();

@@ -1,13 +1,13 @@
 import "./App.css";
-import Nav from "./components/Nav";
-import Cards from "./components/Cards.jsx";
+import Nav from "./components/Nav/Nav";
+import Cards from "./components/Cards/Cards.jsx";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import About from "./components/About";
-import Detail from "./components/Detail";
-import Form from "./components/Form";
-import Favorites from "./components/Favorites";
+import About from "./components/About/About";
+import Detail from "./components/Detail/Detail";
+import Form from "./components/Form/Form";
+import Favorites from "./components/Favorites/Favorites";
 export const URL_BASE = "https://rym2-production.up.railway.app/api/character/";
 export const API_KEY = "key=henrym-acastillosantiago";
 
@@ -48,7 +48,7 @@ function App() {
     !access && navigate("/");
   }, [access]);
   return (
-    <div>
+    <div className="">
       {pathname !== "/" && <Nav onSearch={onSearch} />}
       <Routes>
         <Route path="/" element={<Form login={login} />} />
