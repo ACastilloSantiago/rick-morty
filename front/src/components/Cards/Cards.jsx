@@ -2,7 +2,7 @@ import Card from "../Card/Card";
 import style from "./Cards.module.css";
 const Cards = ({ characters, onClose }) => {
   return (
-    <div className="">
+    <div className={style.div}>
       {/* <h1>Home</h1> */}
       {
         characters.map((Pj) => {

@@ -7,17 +7,16 @@ const reducer = (state = initialState, action) => {
     case ADD_FAV:
       return {
         ...state,
-        myFavorites: [...state.allCharacters, action.payload],
-        allCharacters: [...state.allCharacters, action.payload],
+        myFavorites: action.payload,
+        allCharacters: action.payload,
       };
-    case REMOVE_FAV: {
+    case REMOVE_FAV:
       return {
         ...state,
-        myFavorites: state.myFavorites.filter((pj) => {
-          return pj.id !== Number(action.payload);
-        }),
+        myFavorites: action.payload,
+        allCharacters: action.payload, // este capaz no va
       };
-    }
+
     case FILTER: {
       switch (action.payload) {
         case "all": {
@@ -40,30 +39,14 @@ const reducer = (state = initialState, action) => {
         case "A": {
           return {
             ...state,
-            myFavorites: [...state.allCharacters].sort((a, b) => {
-              if (a.id > b.id) {
-                return 1;
-              }
-              if (a.id < b.id) {
-                return -1;
-              }
-              return 0;
-            }),
+            myFavorites: [...state.allCharacters].sort((a, b) => a.id - b.id),
           };
         }
         case "D": {
           return {
             ...state,
-            ...state.allCharacters,
-            myFavorites: [...state.allCharacters].sort((a, b) => {
-              if (a.id > b.id) {
-                return -1;
-              }
-              if (a.id < b.id) {
-                return 1;
-              }
-              return 0;
-            }),
+
+            myFavorites: [...state.allCharacters].sort((a, b) => b.id - a.id),
           };
         }
         default:

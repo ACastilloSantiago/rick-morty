@@ -1,30 +1,75 @@
-/* .div {
-  width: 18vw;
-  height: 18vw;
-  background-color: rgb(177, 173, 70);
+.div {
+  background-color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: center;
-  padding: 0 0 5rem 0;
+  /* padding: 0 0 5rem 0; */
   position: relative;
   border-radius: 0.4rem;
-  margin: 0.5rem;
+  border: solid rebeccapurple;
+  margin-bottom: 2%;
+}
+.close {
+  border: groove;
+  position: absolute;
+  margin-top: 0.2em;
+  margin-right: 0.2em;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+  /* border-color: rgb(0, 0, 0); */
+  transition: font-size 0.3s;
+  font-size: 25px;
+}
+.close:hover {
+  font-size: 30px;
+  background-color: rgba(255, 0, 0, 0.719);
+}
+.fav {
+  border: groove;
+  position: absolute;
+
+  margin-top: 0.2em;
+  margin-left: 0.2em;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  transition: font-size 0.3s;
+  font-size: 20px;
+}
+.fav:hover {
+  font-size: 25px;
+  background-color: rgb(235, 94, 181);
+}
+.name {
+  position: absolute;
+  font-size: 18px;
+  bottom: 1vh;
+  right: 5vw;
+  background-color: white;
+  width: 10vw;
+  color: rgb(97, 100, 100);
+  transition: color 0.3s;
+  transition: font-size 0.3s;
+}
+.name:hover {
+  color: rgb(149, 70, 202); /* Color al pasar el cursor sobre el texto */
+  font-size: 22px;
 }
 
-.name {
-  font-size: 0.8em;
-  position: absolute;
-  bottom: 10vh;
-  left: 1vw;
-  background-color: rgb(230, 233, 200);
-  width: 10vw;
+.name:active {
+  color: blue; /* Color cuando se hace clic en el texto */
 }
 
 .image {
-  width: 100%;
+  border-radius: 1em;
+
+  border-image: url("https://sajadsarlaki.github.io/asset/gifs/portal.gif");
+  /* border: solid red; */
+  /* background-image: url("https://sajadsarlaki.github.io/asset/gifs/portal.gif"); */
 }
 
-.btn {
+/* .btn {
   background-color: rgb(243, 52, 253);
   color: black;
   position: absolute;
@@ -34,10 +79,11 @@
   width: 1vw;
   height: 3vh;
   cursor: pointer;
-}
+} */
 
 .data {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-} */
+  margin: 1em;
+  /* display: flex; */
+  /* width: 100%; */
+  /* justify-content: space-around; */
+}

@@ -1,0 +1,31 @@
+.center {
+  padding: 0.5%;
+  margin-top: 5px;
+  border: solid green;
+  background-color: grey;
+  /* text-align: end; */
+  /* width: 30%;
+  height: 20%; */
+  /* position: relative; */
+}
+
+.bt {
+}
+
+.nav {
+  /* position: center; */
+  text-align: end;
+  width: 80%;
+}
+.bt1 {
+  /* text-align: start; */
+  /* position: left; */
+}
+.bt2 {
+  /* text-align: start; */
+  /* position: left; */
+}
+.bt3 {
+  /* text-align: start; */
+  /* position: left; */
+}

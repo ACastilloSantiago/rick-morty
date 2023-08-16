@@ -40,18 +40,16 @@ const Card = ({
   }, [myFavorites]);
   return (
     <div className={style.div}>
-      <hr />
       {isFav ? (
-        <button className={style.btn} onClick={handleFavorite}>
+        <button className={style.fav} onClick={handleFavorite}>
           ❤️
         </button>
       ) : (
-        <button className={style.btn} onClick={handleFavorite}>
+        <button className={style.fav} onClick={handleFavorite}>
           🤍
         </button>
       )}
       <img className={style.image} src={image} alt={name} />
-      <button onClick={() => onClose(id)}>X</button>
       <Link to={`/detail/${id}`}>
         <h3 className={style.name}>{name}</h3>
       </Link>
@@ -61,6 +59,9 @@ const Card = ({
         <h2>Status:{status}</h2>
         <h2>Origin:{origin.name}</h2>
       </div>
+      <button className={style.close} onClick={() => onClose(id)}>
+        X
+      </button>
     </div>
   );
 };
