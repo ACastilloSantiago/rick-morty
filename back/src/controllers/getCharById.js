@@ -5,20 +5,19 @@ const URL = "https://rickandmortyapi.com/api/character/";
 const getCharById = async (req, res) => {
   try {
     const { id } = req.params;
-    const { data } = await axios(
-      `https://rickandmortyapi.com/api/character/${id}`
-    );
-    const { name, gender, species, origin, image, status } = data;
-    if (name) {
-      const character = {
-        name,
-        gender,
-        species,
-        origin,
-        image,
-        status,
-        id: +id,
-      };
+    const { name, gender, species, origin, image, status } = (
+      await axios.get(URL + Number(id))
+    ).data;
+    const character = {
+      name,
+      gender,
+      species,
+      origin,
+      image,
+      status,
+      id: +id,
+    };
+    if (character.name) {
       res.status(200).json(character);
     } else {
       res.status(404).send("Not Found");

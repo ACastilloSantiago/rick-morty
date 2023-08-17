@@ -37,17 +37,17 @@ const Favorites = ({ myFavorites }) => {
       </select>
       {myFavorites.map((Pj) => {
         return (
-          <div key={Pj.id}>
-            <Card
-              id={Pj.id}
-              name={Pj.name}
-              status={Pj.status}
-              species={Pj.species}
-              gender={Pj.gender}
-              origin={Pj.origin}
-              image={Pj.image}
-            />
-          </div>
+          <Card
+            key={Pj.id}
+            id={Pj.id}
+            name={Pj.name}
+            status={Pj.status}
+            species={Pj.species}
+            gender={Pj.gender}
+            origin={Pj.origin}
+            image={Pj.image}
+            onClose={Pj.onClose}
+          />
         );
       })}
     </div>

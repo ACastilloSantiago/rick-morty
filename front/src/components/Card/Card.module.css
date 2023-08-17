@@ -1,9 +1,11 @@
 .div {
-  background-color: white;
+  margin-left: 0;
+  width: 100%;
+  background-image: url("https://img.freepik.com/vector-premium/patron-galaxia-fondo-espacio-oscuro_739746-93.jpg");
+  color: wheat;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  /* padding: 0 0 5rem 0; */
   position: relative;
   border-radius: 0.4rem;
   border: solid rebeccapurple;
@@ -43,9 +45,9 @@
 }
 .name {
   position: absolute;
-  font-size: 18px;
+  font-size: 1em;
   bottom: 1vh;
-  right: 5vw;
+  right: 3vw;
   background-color: white;
   width: 10vw;
   color: rgb(97, 100, 100);
@@ -62,9 +64,11 @@
 }
 
 .image {
-  border-radius: 1em;
+  border-radius: 10em;
+  width: 40%;
 
-  border-image: url("https://sajadsarlaki.github.io/asset/gifs/portal.gif");
+  margin: 1em;
+  /* border-image: url("https://sajadsarlaki.github.io/asset/gifs/portal.gif"); */
   /* border: solid red; */
   /* background-image: url("https://sajadsarlaki.github.io/asset/gifs/portal.gif"); */
 }
@@ -82,7 +86,12 @@
 } */
 
 .data {
-  margin: 1em;
+  /* margin: 1em; */
+  /* text-align: center; */
+  /* margin-right: 5em; */
+  font-family: monospace;
+  margin: 0;
+
   /* display: flex; */
   /* width: 100%; */
   /* justify-content: space-around; */

@@ -8,11 +8,11 @@ const postFav = (req, res) => {
 
 const deleteFav = (req, res) => {
   const { id } = req.params;
-  console.log(id);
-  myFavorites = myFavorites.filter((favorite) => {
-    console.log(favorite.id);
-    favorite.id !== id; // con el + parseamos a number
-  });
+  // console.log(id);
+  // console.log(myFavorites);
+  myFavorites = myFavorites.filter((favorite) => favorite.id !== +id);
+  // con el + del id parseamos a number el params
+  // console.log(myFavorites);
   return res.status(200).json(myFavorites);
   // return;
 };
