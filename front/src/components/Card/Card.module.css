@@ -1,15 +1,18 @@
 .div {
-  margin-left: 0;
-  width: 100%;
+  /* margin-left: 0; */
+  height: 20rem;
+  width: 35rem;
+  /* max */
   background-image: url("https://img.freepik.com/vector-premium/patron-galaxia-fondo-espacio-oscuro_739746-93.jpg");
   color: wheat;
-  display: flex;
   flex-direction: row-reverse;
-  align-items: center;
   position: relative;
   border-radius: 0.4rem;
   border: solid rebeccapurple;
   margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .close {
   border: groove;
@@ -19,7 +22,7 @@
   top: 0;
   right: 0;
   border-radius: 10px;
-  /* border-color: rgb(0, 0, 0); */
+
   transition: font-size 0.3s;
   font-size: 25px;
 }
@@ -30,7 +33,6 @@
 .fav {
   border: groove;
   position: absolute;
-
   margin-top: 0.2em;
   margin-left: 0.2em;
   top: 0;
@@ -44,33 +46,37 @@
   background-color: rgb(235, 94, 181);
 }
 .name {
+  background-color: rgba(238, 226, 161, 0.76);
+  border: solid rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   position: absolute;
   font-size: 1em;
-  bottom: 1vh;
-  right: 3vw;
-  background-color: white;
+  bottom: 30vh;
+  /* right: 1.8vw; */
   width: 10vw;
-  color: rgb(97, 100, 100);
+
   transition: color 0.3s;
   transition: font-size 0.3s;
+  border-radius: 12rem;
+  /* justify-content: start; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  justify-content: center;
 }
 .name:hover {
-  color: rgb(149, 70, 202); /* Color al pasar el cursor sobre el texto */
+  color: rgb(149, 70, 202);
   font-size: 22px;
 }
 
 .name:active {
-  color: blue; /* Color cuando se hace clic en el texto */
+  color: blue;
 }
 
 .image {
-  border-radius: 10em;
+  border-radius: 10rem;
   width: 40%;
-
-  margin: 1em;
-  /* border-image: url("https://sajadsarlaki.github.io/asset/gifs/portal.gif"); */
-  /* border: solid red; */
-  /* background-image: url("https://sajadsarlaki.github.io/asset/gifs/portal.gif"); */
+  margin: 1rem;
 }
 
 /* .btn {
@@ -87,12 +93,16 @@
 
 .data {
   /* margin: 1em; */
-  /* text-align: center; */
+  /* text-align:  ; */
   /* margin-right: 5em; */
   font-family: monospace;
-  margin: 0;
+  /* margin: 0; */
+  /* position: absolute; */
 
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
   /* width: 100%; */
-  /* justify-content: space-around; */
+  /* justify-content: start; */
+  margin: 0;
+  padding: 0;
 }
