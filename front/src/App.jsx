@@ -35,7 +35,7 @@ function App() {
       setAccess(access);
       access && navigate("/home");
     } catch (error) {
-      console.log(error);
+      console.log("s", error);
     }
   };
 
